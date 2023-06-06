@@ -20,8 +20,6 @@ connectionDB();
 //Routings
 app.use(`${prefix}/auth`, require("./Routes/auth"));
 app.use(`${prefix}/movies`, require("./Routes/movies"));
-app.use("/", (req, res) => {
-  res.send("<h1>Server Running...</h1>");
-});
+
 app.use(appErrorHandler);
 module.exports = app;
